@@ -31,3 +31,30 @@
 ├── section_education_en.tex # Educational Background (English)
 ├── ...                      # 其他章节文件
 └── README.md
+```
+
+## 🚀 如何编译 (How to Build)
+本项目使用 XeLaTeX 引擎。你可以在本地 (TeX Live / MacTeX) 或 Overleaf 上编译。
+
+前置要求 (Prerequisites)
+请确保项目的 `fonts/` 目录下包含必要的中文字体文件（如 Adobe Song/Heiti 等），或者你的操作系统已安装这些字体。
+
+编译命令 (Build Commands)
+生成中文版:
+```bash
+xelatex main_cn.tex
+```
+生成英文版:
+```bash
+xelatex main_en.tex
+```
+注意：通常需要连续编译两次，以确保页码或目录链接跳转正确。
+
+## 👏 致谢 (Credits)
+本项目基于开源社区成果修改，特别感谢：
+- 模板基础: Awesome Latex CV by Junhao Hua & Christophe Roger.
+- 字体支持: 中文字体支持方案 (`zh_cn-adobefonts_external.sty`) 及字体库引用自 billryan/resume 项目。
+
+## ⚖️ 开源协议 (License)
+代码部分: 模板代码 (`.cls` 文件及结构) 遵循 LaTeX Project Public License (LPPL) 1.3c 协议。详情请见 LICENSE 文件。
+内容部分: 简历的具体内容（文字、个人信息、图片）版权归 王睿敏 所有。 (Content Copyright © 2025 Ruimin Wang. All rights reserved.)
