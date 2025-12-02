@@ -1,0 +1,32 @@
+\sectionTitle{Projects}{\faCode}
+
+\begin{experiences}
+
+\experience
+    {CAD/CAM Core Process Development (2D Contour/Chamfer/T-Slot)}
+    {Introduction: Responsible for developing the core CAM module for industrial software. Implemented the complete workflow from parameter definition to toolpath calculation based on a proprietary engine and the ModuleWorks kernel.}
+    {
+        \begin{itemize}
+            \item \textbf{Architecture Design}: Developed based on the \textbf{MVVM} architecture to thoroughly decouple UI views from business logic; Designed a universal parameter validator to ensure user input complies with physical machining constraints.
+            \item \textbf{Kernel Integration}: Deeply integrated the proprietary engine with the \textbf{ModuleWorks} algorithm library; Responsible for strategy implementation and data interaction for complex processes such as 2D contour, model chamfer, helical entry, and T-slot.
+            \item \textbf{Computational Geometry}: Implemented geometric analysis algorithms based on \textbf{B-Rep topology}. Developed automatic extraction of closed wireframes (Wire) on model surfaces and 3D model projection calculation, solving boundary recognition issues for complex curved surfaces.
+            \item \textbf{Performance \& Robustness}: Addressed floating-point \textbf{Tolerance} issues in geometric calculations by determining the balance between performance and precision through extensive boundary testing, eliminating model tearing risks; Significantly improved projection efficiency via algorithm optimization.
+        \end{itemize}
+    }
+    {C++, Qt, MVVM, ModuleWorks, Computational Geometry, Algorithm Optimization}
+    \\*
+    \\*
+\experience
+    {DFM Rule Library Management System}
+    {Introduction: Developed a Design for Manufacturability (DFM) rule management system based on Qt/C++. Provided hierarchical rule management, parameter configuration, and persistent storage, supporting automatic verification for milling, drilling, and other scenarios.}
+    {
+        \begin{itemize}
+            \item \textbf{Complex UI Interaction}: Implemented multi-level rule trees by overriding \textbf{QTreeView} and \textbf{QAbstractItemModel}; Used custom \textbf{Delegates} to embed controls like SpinBox/ComboBox into table cells, enabling dynamic editing of diverse rule parameters (e.g., min wall thickness, aspect ratio).
+            \item \textbf{Incremental Update \& Persistence}: Designed a state tracking mechanism based on \textbf{Dirty Flags}. Maintained modification status in memory and committed only changed data (Delta) to the \textbf{SQLite} database upon saving, significantly reducing I/O overhead.
+            \item \textbf{Drag \& Drop with Validation}: Implemented drag-and-drop logic based on MIME Data. By overriding \texttt{dragMoveEvent} and \texttt{dropEvent}, added hierarchical validation logic (e.g., allowing only peer sorting, prohibiting dragging parent nodes into child nodes) to ensure tree integrity.
+            \item \textbf{Data Modeling}: Designed a generic rule data structure supporting extensions for multiple rule categories like "General/Milling/Drilling", and implemented import/export functionality using JSON/XML serialization.
+        \end{itemize}
+    }
+    {C++, Qt 5, MVVM, SQLite, QTreeView, Delegate, Design Pattern} \\
+
+\end{experiences}

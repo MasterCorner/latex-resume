@@ -1,0 +1,59 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+%
+% Resume of Ruimin Wang (English Version)
+%
+% Author:
+% Ruimin Wang
+%
+% Template based on:
+% Awesome Source CV by Junhao Hua & Christophe Roger
+% https://github.com/huajh/huajh-awesome-latex-cv
+% 
+
+\documentclass[localFont]{my-custom-cv} %alternative
+
+\usepackage{zh_cn-adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zn_cn-adobe/)
+%\usepackage{zh_cn-adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{hyperref}
+
+\renewcommand*{\born}[1]{\socialtext{\makebox[1.2em][c]{\faBold} Born:}{#1}}
+\renewcommand*{\gender}[1]{\socialtext{\makebox[1.2em][c]{\faMale} Gender:}{#1}}
+\renewcommand*{\homepage}[1]{\sociallink{\makebox[1.2em][c]{\homeSymbol} Blog:}{http://#1}{#1}}
+\renewcommand*{\email}[1]{\sociallink{\makebox[1.2em][c]{\mailSymbol} Email:}{mailto:#1}{#1}}
+\renewcommand*{\smartphone}[1]{\socialtext{\makebox[1.2em][c]{\mobileSymbol} Mobile:}{#1}}
+\renewcommand*{\website}[1]{\sociallink{\makebox[1.2em][c]{\faGlobe} Web:}{https://#1}{#1}}
+
+
+\name{Ruimin}{Wang}
+
+%\photo{2.5cm}{avatar}
+\socialinfo{
+    \begin{tabular}{l l}
+        \gender{male}
+        &
+        \born{1997} \\
+        \website{resume.chiikawa.asia}
+    	&
+        \homepage{blog.csdn.net/b296405422} 
+        \\
+	    \smartphone{(+86) 13101375022}
+    	&
+    	\email{296405422@qq.com} \\
+    \end{tabular}
+}
+
+\begin{document}
+\renewcommand{\techstacklabel}{Tech Stack:}
+% A4纸宽21cm - 左边距1cm - 右边距1cm = 19cm (总可用宽度)
+    % 19cm 约等于 16.5cm (项目宽) + 2.5cm (左侧预留)
+    \setlength{\rightcolumnlength}{19cm} 
+    % -------------------------------------------
+	\makecvheader
+	\input{section_skills_en}				% Section Skill
+	\input{section_work_en} 
+	\input{section_experience_short_en}		% Section experiences
+	\input{section_education_en}				% Section education	
+	\input{section_awards_en}				% Section Awards
+    \noindent \\
+\end{document}

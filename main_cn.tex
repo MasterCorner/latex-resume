@@ -1,0 +1,50 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+%
+% Resume of Ruimin Wang (Chinese Version)
+% 王睿敏的中文简历
+%
+% Author:
+% Ruimin Wang (王睿敏)
+%
+% Template based on:
+% Awesome Source CV by Junhao Hua & Christophe Roger
+% https://github.com/huajh/huajh-awesome-latex-cv
+%
+ 
+\documentclass[localFont]{my-custom-cv} %alternative
+
+\usepackage{zh_cn-adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zn_cn-adobe/)
+%\usepackage{zh_cn-adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{hyperref}
+
+\name{}{王睿敏}
+
+%\photo{2.5cm}{avatar}
+\socialinfo{
+    \begin{tabular}{l l}
+        \gender{男}
+        &
+        \born{1997年} \\
+        \website{resume.chiikawa.asia}
+    	&
+        \homepage{blog.csdn.net/b296405422} 
+        \\
+	    \smartphone{(+86) 13101375022}
+    	&
+    	\email{296405422@qq.com} \\
+    \end{tabular}
+}
+
+
+\begin{document}
+\renewcommand{\baselinestretch}{0.95}
+	\makecvheader
+	\input{section_skills_cn}				% Section Skill
+    \input{section_work_cn}    
+	\input{section_experience_short_cn}		% Section experiences
+	\input{section_education_cn}				% Section education	
+	\input{section_awards_cn}				% Section Awards
+	
+	\noindent \\
+\end{document}

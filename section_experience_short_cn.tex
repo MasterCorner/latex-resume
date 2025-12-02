@@ -1,0 +1,33 @@
+\sectionTitle{项目经历}{\faCode}
+
+\begin{experiences}
+
+\experience
+    {CAD/CAM 核心工序开发 (2D轮廓/倒角/T型槽)}
+    {简介：负责工业软件核心 CAM 模块开发，基于自研引擎与 ModuleWorks 内核，实现从参数定义到刀路计算的全流程。}
+    {
+        \begin{itemize}
+            \item \textbf{架构设计}：基于 \textbf{MVVM} 架构开发，实现 UI 视图与业务逻辑的彻底解耦；设计通用的参数校验器，确保用户输入的几何参数符合加工物理约束。
+            \item \textbf{内核集成}：深度对接公司自研引擎及 \textbf{ModuleWorks} 算法库，负责 2D 轮廓、模型倒角、螺旋下刀及 T 型槽等复杂工序的策略实现与数据交互。
+            \item \textbf{计算几何算法}：实现基于 B-Rep 拓扑结构的几何分析算法。开发了模型表面闭合线圈（Wire）自动提取及三维模型投影计算功能，解决了复杂曲面的边界识别问题。
+            \item \textbf{性能与鲁棒性}：针对几何计算中的浮点数\textbf{公差（Tolerance）}问题，通过大量的边界测试找到性能与精度的平衡点，消除了计算误差导致的破面问题；通过算法优化显著提升了投影计算效率。
+        \end{itemize}
+    }
+    {C++, Qt, MVVM, ModuleWorks, Computational Geometry, Algorithm Optimization}
+    \\*
+    \\*
+
+\experience
+    {工艺规则库管理系统 (DFM Rule Library)}
+    {简介：基于 Qt/C++ 开发的可制造性设计（DFM）规则管理系统，提供规则的层级化管理、参数配置及持久化存储，支持铣削、钻孔等多种工艺场景的自动校验。}
+    {
+        \begin{itemize}
+            \item \textbf{复杂界面交互}：基于 \textbf{QTreeView} 与 \textbf{QAbstractItemModel} 重写实现了多层级规则树；使用自定义 \textbf{Delegate}（代理）在表格单元格中嵌入 SpinBox/ComboBox 等控件 ，实现了不同类型规则参数（如最小壁厚、深宽比）的动态编辑。
+            \item \textbf{增量更新与持久化}：设计了基于\textbf{“脏标记” (Dirty Flag)} 的状态追踪机制。在内存中维护数据对象的修改状态，保存时仅将变动的数据（Delta）提交至 \textbf{SQLite} 数据库，显著减少了 I/O 开销。
+            \item \textbf{拖拽与校验}：实现了基于 MIME Data 的拖拽逻辑 。通过重写 \texttt{dragMoveEvent} 和 \texttt{dropEvent}，增加了层级校验逻辑（如同层级排序、禁止父节点拖入子节点），保证了树形结构的完整性。
+            \item \textbf{数据模型}：设计了通用的规则数据结构，支持“常规/铣削/孔加工”等多类规则的扩展，通过 JSON/XML 序列化技术实现了规则库的导入导出。
+        \end{itemize}
+    }
+    {C++, Qt 5, MVVM, SQLite, QTreeView, Delegate, Design Pattern} \\
+
+\end{experiences}
